@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  yolov8:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - TERM=xterm-256color
+    volumes:
+      - .:/app

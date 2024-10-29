@@ -1,0 +1,4 @@
+ultralytics
+streamlit
+opencv-python-headless
+python-dotenv
