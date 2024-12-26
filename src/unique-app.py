@@ -7,16 +7,17 @@ import time
 import numpy as np
 
 # Lista de objetos a reconocer; si está vacía, se muestran todos
-filtered_objects = ["bottle", "cat", "mouse", "keyboard", "guitar", "person", "tv"]
+filtered_objects = ["bottle", "cat", "mouse", "keyboard", "guitar", "person", "tv", "chair"]
 
 # Cargar el modelo YOLOv8
 model = YOLO("../yolov8n.pt")
 
 # Pares de objetos para detección de colisión
-object_pairs = [("bottle", "keyboard"), ("mouse", "keyboard"), ("tv", "cat"), ("person", "tv"), ("cat", "guitar"), ("person", "guitar")]
+object_pairs = [("bottle", "keyboard"), ("mouse", "keyboard"), ("tv", "cat"), ("person", "tv"), ("cat", "guitar"), ("person", "guitar"), ("chair", "person")]
 
 # URL del video
-rute = "http://172.23.96.6:4748"
+# rute = "http://172.23.96.6:4748"
+rute = "http://172.28.112.225:4748"
 
 # Interfaz de Streamlit
 st.title("Live Object Detection with Collision Alert")
